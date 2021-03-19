@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-A collection of useful Swift extension.
+A collection of useful Swift extension for standard types and classes.
                        DESC
 
   s.homepage         = 'https://github.com/szwathub/ExtrasKit'
