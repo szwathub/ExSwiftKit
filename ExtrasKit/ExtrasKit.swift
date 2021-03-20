@@ -20,7 +20,11 @@ public struct ExtrasKitWrapper<Base> {
     }
 }
 
-public protocol ExtrasKitCompatible: AnyObject { }
+public protocol ExtrasKitCompatible {
+    associatedtype CompatibleType
+    static var ek: ExtrasKitWrapper<CompatibleType>.Type { get }
+    var ek: ExtrasKitWrapper<CompatibleType> { get }
+}
 
 /// Gets a namespace holder for ExtrasKit compatible types.
 extension ExtrasKitCompatible {
@@ -32,3 +36,5 @@ extension ExtrasKitCompatible {
         return ExtrasKitWrapper(self)
     }
 }
+
+
